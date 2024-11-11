@@ -12,7 +12,7 @@
     ```
 ## Diagrama UML
 ![Diagrama UML do Sistema de Biblioteca](public/uml.png)
-PS: A implementação foi realizada em inglês, de forma a acostumar cada vez mais em inglês.
+PS: A implementação foi realizada em inglês, de forma a ter mais familiaridade com a linguagem.
 
 
 ## Teste
