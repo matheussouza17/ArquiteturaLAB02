@@ -2,9 +2,9 @@ import Book from './models/book';
 import Library from './models/library';
 
 function registerBooks(library: Library) {
-    const book1 = new Book(1, "Don Quixote", "Miguel de Cervantes");
-    const book2 = new Book(2, "1984", "George Orwell");
-    const book3 = new Book(3, "The Lord of the Rings", "J.R.R. Tolkien");
+    const book1 = new Book(1, "Karl Peter Leihs", "Entrevista com o Diabo");
+    const book2 = new Book(2, "1984", "O Gladiador");
+    const book3 = new Book(3, "Bible", "Bible");
 
     library.addBook(book1);
     library.addBook(book2);
