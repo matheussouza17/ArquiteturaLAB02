@@ -30,6 +30,9 @@ class Employee {
     public getMatricula(): number {
         return this.matricula;
     }
+    public getCargo(): string{
+        return this.cargo;
+    }
 }
 
 export default Employee;

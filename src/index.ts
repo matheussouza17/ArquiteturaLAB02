@@ -12,12 +12,9 @@ function main() {
     empresa.adicionarFuncionario(funcionario2);
     empresa.adicionarFuncionario(funcionario3);
 
-    const consultaFuncionario1 = empresa.consultarFuncionario(1);
-    if (consultaFuncionario1) {
-        console.log(`Funcionário ${consultaFuncionario1.getNome()} encontrado: ${consultaFuncionario1.getMatricula()} - Cargo: ${consultaFuncionario1.getSalario()}`);
-    }
     empresa.atualizarSalario(2, 7500);
     empresa.consultarFuncionario(4);
+    empresa.consultarFuncionario(1);
     empresa.atualizarSalario(5, 6000);
     funcionario3.setSalario(-3000);
 }

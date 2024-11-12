@@ -26,6 +26,9 @@ class Company {
         if (!employee) {
             console.error(`Funcionário com matrícula ${matricula} não encontrado.`);
         }
+        else {
+            console.info(`\nFuncionário: ${employee?.getNome()}\nMatrícula: ${employee?.getMatricula()} \nCargo: ${employee?.getCargo()}\nSalário: ${employee?.getSalario()}\n`)
+        }    
         return employee;
     }
 }
