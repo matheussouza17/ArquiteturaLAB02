@@ -1,31 +1,25 @@
-import Book from './models/book';
-import Library from './models/library';
+import Employee from './models/employee';
+import Company from './models/company';
 
-function registerBooks(library: Library) {
-    const book1 = new Book(1, "Karl Peter Leihs", "Entrevista com o Diabo");
-    const book2 = new Book(2, "1984", "O Gladiador");
-    const book3 = new Book(3, "Bible", "Bible");
+function main() {
+    const empresa = new Company();
 
-    library.addBook(book1);
-    library.addBook(book2);
-    library.addBook(book3);
+    const funcionario1 = new Employee(1, 'Lara', 'Desenvolvedora', 5000);
+    const funcionario2 = new Employee(2, 'Antonio', 'Gerente de Projetos', 7000);
+    const funcionario3 = new Employee(3, 'Daniel', 'Analista de Dados', 4500);
 
-    console.log("Books registered in the collection.");
+    empresa.adicionarFuncionario(funcionario1);
+    empresa.adicionarFuncionario(funcionario2);
+    empresa.adicionarFuncionario(funcionario3);
+
+    const consultaFuncionario1 = empresa.consultarFuncionario(1);
+    if (consultaFuncionario1) {
+        console.log(`Funcionário ${consultaFuncionario1.getNome()} encontrado: ${consultaFuncionario1.getMatricula()} - Cargo: ${consultaFuncionario1.getSalario()}`);
+    }
+    empresa.atualizarSalario(2, 7500);
+    empresa.consultarFuncionario(4);
+    empresa.atualizarSalario(5, 6000);
+    funcionario3.setSalario(-3000);
 }
 
-// Function to register a loan
-function makeLoan(library: Library, code: number) {
-    library.registerLoan(code);
-}
-
-// Function to check the availability of a book
-function checkAvailability(library: Library, code: number) {
-    const available = library.checkAvailability(code);
-    console.log(`The book with code ${code} is ${available ? "available" : "unavailable"}.`);
-}
-
-const library = new Library();
-registerBooks(library);
-makeLoan(library, 1);
-checkAvailability(library, 1);
-checkAvailability(library, 2);
+main();
